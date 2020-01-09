@@ -8,4 +8,12 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="MySwitch" parent="Theme.AppCompat.Light">
+        <item name="trackTint">@color/colorPrimaryDark</item>
+        <!-- Неактивное состояние -->
+        <item name="colorSwitchThumbNormal">@color/switchoff</item>
+        <!-- Активное состояние -->
+        <item name="colorControlActivated">@color/switchon</item>
+    </style>
+
 </resources>

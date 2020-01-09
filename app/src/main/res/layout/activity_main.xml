@@ -1,18 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:id="@+id/toptop"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/backGround">
 
-    <TextView
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_above="@id/second"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true">
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/on_off_switch"
+            android:theme="@style/MySwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:thumbTint="#000000"
+            android:trackTint="#ffffff"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="40dp"
+            android:textOff="OFF"
+            android:textOn="ON"
+            app:showText="true"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Vibration"
+            android:layout_marginRight="25dp"
+            android:layout_alignParentRight="true"
+            android:fontFamily="sans-serif"
+            android:textSize="20sp"
+            android:layout_marginTop="5dp"
+            android:textColor="#ffffff"
+            android:layout_below="@id/on_off_switch"/>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/second"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical" >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageButton
+            android:id="@+id/mute"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_gravity="center"
+            android:background="@drawable/mutebutton"
+            android:layout_margin="10dp"/>
+        <ImageButton
+            android:id="@+id/plus"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_gravity="center"
+            android:background="@drawable/plusbutton"
+            android:layout_margin="10dp"/>
+        <ImageButton
+            android:id="@+id/minus"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_gravity="center"
+            android:background="@drawable/minusbutton"
+            android:layout_margin="10dp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="110sp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/textEdifier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="sans-serif"
+            android:textSize="50sp"
+            android:textColor="#ffffff"
+            android:text="EDIFIER"
+            android:layout_alignParentTop="true"></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="sans-serif"
+            android:textSize="30sp"
+            android:textColor="#ffffff"
+            android:text="RC10"
+            android:layout_below="@+id/textEdifier"></TextView>
+
+    </RelativeLayout>
+
+</RelativeLayout>
